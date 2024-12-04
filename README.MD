@@ -12,7 +12,7 @@ A React TypeScript application for searching and viewing stock market informatio
 
 ## Live Demo
 
-[Add your deployment link here]
+https://my-stock-app-chi.vercel.app/
 
 ## Tech Stack
 
