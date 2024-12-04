@@ -2,9 +2,9 @@
 import { Stock, SearchResponse, StockMatch } from "../types/stock";
 
 const BASE_URL = "https://www.alphavantage.co/query";
-//const API_KEY = "RIBXT3XYLI69PC0Q";
-const API_KEY = "64FOODU0WV7TGOMF"; // Mock data
-const mockStocks = {
+const API_KEY = "RIBXT3XYLI69PC0Q";
+
+/*const mockStocks = {
   bestMatches: [
     {
       "1. symbol": "TSCO.LON",
@@ -172,7 +172,7 @@ const mockStocks = {
       "9. matchScore": "0.2667",
     },
   ],
-};
+};*/
 
 const transformStockMatch = (match: StockMatch): Stock => ({
   symbol: match["1. symbol"],
@@ -186,7 +186,7 @@ const transformStockMatch = (match: StockMatch): Stock => ({
   matchScore: parseFloat(match["9. matchScore"]),
 });
 
-/*export const stockApi = {
+export const stockApi = {
   searchStocks: async (query: string): Promise<Stock[]> => {
     try {
       const response = await fetch(
@@ -239,9 +239,9 @@ const transformStockMatch = (match: StockMatch): Stock => ({
       throw new Error("Failed to fetch stock details");
     }
   },
-};*/
+};
 
-export const stockApi = {
+/*export const stockApi = {
   searchStocks: async (query: string): Promise<Stock[]> => {
     // Simulate API delay
     await new Promise((resolve) => setTimeout(resolve, 300));
@@ -317,4 +317,4 @@ export const stockApi = {
 
     return mockDetails;
   },
-};
+};*/
